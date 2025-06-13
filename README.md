@@ -1,98 +1,85 @@
-🧠 Sentiment Analysis on Customer Reviews
-This project applies Deep Learning and Natural Language Processing (NLP) techniques to classify customer reviews as Positive or Negative in real time. It features a Flask-based web interface and is developed using Keras, TensorFlow, and Jupyter Notebook for easy experimentation and visualization.
+# 📝 Sentiment Analysis Web App
 
-🚀 Features
-🧠 Sentiment Classification: Predicts whether the input text conveys a positive or negative sentiment.
+This project builds a **Flask-based** NLP & Machine Learning web application for analyzing text sentiment. Users can input sentences and receive real-time classifications as **positive** or **negative**.
 
-🌐 Flask Web Interface: Simple and interactive web app for users to input reviews and view results instantly.
+## 🚀 Features
 
-🤖 Deep Learning Model: Built with Keras and trained on labeled review data.
+- 🧹 **Text Preprocessing**: Includes tokenization, stop-word removal, and lemmatization.
+- 🔍 **Feature Extraction**: Converts text into TF-IDF vectors for model input.
+- 🤖 **Sentiment Classification**: Utilizes a trained ML model (e.g., Logistic Regression or Naive Bayes).
+- 🌐 **Flask Frontend**: Clean interface for text input and live sentiment results.
+- 🧠 **Model Persistence**: Model and vectorizer stored via pickle for easy reuse.
+- 📊 **Evaluation & Analysis**: Training and evaluation performed in Jupyter Notebook.
 
-📊 Visualization & Metrics: Development and evaluation done in Jupyter Notebook with insights into model performance.
-
-🧪 Realtime Prediction: Instant feedback from the web interface using a trained model.
-
-🛠️ Technologies Used
-Python: Core programming language
-
-Flask: Web framework for the interactive UI
-
-Keras: Deep learning library to build and train the model
-
-TensorFlow: Backend for Keras to execute deep learning operations
-
-Jupyter Notebook: For model training, visualization, and evaluation
-
-Pandas & NumPy: For data manipulation and preprocessing
-
-🗂️ Project Structure
-
+## 🗂️ Project Structure
 Sentiment-Analysis/
-├── sentiment_model.h5                 # Trained Keras model
-├── app.py                             # Flask web application
-├── Sentiment_Analysis_Notebook.ipynb # Jupyter notebook for model training & testing
-├── data/                              # Dataset folder with labeled reviews
-├── requirements.txt                   # Python dependencies
-├── README.md                          # Project documentation
-├── static/ & templates/               # HTML/CSS/JS for the Flask app
-└── LICENSE                            # MIT License
+├── app.py # Flask web application
+├── sentiment_analysis.ipynb # Data preprocessing, model training & evaluation
+├── model.pkl # Serialized ML model + vectorizer
+├── requirements.txt # Python dependencies
+├── templates/ & static/ # HTML, CSS for front-end
+├── README.md # This documentation file
+└── LICENSE # MIT License
 
-⚙️ Setup Instructions
-🔄 Clone the Repository
+## ⚙️ Setup Instructions
 
-git clone https://github.com/your-username/Sentiment-Analysis.git
+### 🔄 Clone the Repository
+```
+git clone https://github.com/AaryaMehta2506/Sentiment-Analysis.git
 cd Sentiment-Analysis
-🧪 Create and Activate Virtual Environment (Recommended)
-
+```
+### 🧪 Create & Activate Virtual Env
+```
 python -m venv env
-source env/bin/activate     # On Windows: env\Scripts\activate
-📦 Install Required Packages
-bash
-Copy
-Edit
+source env/bin/activate       # Windows: env\Scripts\activate
+```
+### 📦 Install Dependencies
+```
 pip install -r requirements.txt
-🚀 Run the Flask App
-bash
-Copy
-Edit
+```
+### 🚀 Run the Flask App
+```
 python app.py
-Then, open your browser and go to: http://127.0.0.1:5000/
+```
 
-📊 Model Training & Evaluation
-To retrain the model or explore how it works:
+Access the app at http://127.0.0.1:5000/ to input text and see sentiment predictions.
 
-Open Sentiment_Analysis_Notebook.ipynb in Jupyter Notebook or Google Colab.
+## 📊 Model Training & Evaluation
+To retrain the model or view its performance:
 
-Follow the steps for:
+Open sentiment_analysis.ipynb in Jupyter or Colab.
 
-Data loading & cleaning
+Follow steps for cleaning, TF-IDF vectorization, model training, and model evaluation.
 
-Tokenization and preprocessing
+Serialize your trained model and vectorizer as model.pkl.
 
-Model creation using Keras
+## 💡 Example Use Cases
+Input: "I absolutely love this!"
+Output: 🚀 Positive
 
-Training and evaluation
+Input: "This was a disappointing experience."
+Output: 😞 Negative
 
-Save the trained model as sentiment_model.h5.
+## 🤝 Contributing
+Contributions are welcome! Here’s how you can help:
 
-💡 Example Use Case
-Input Review	Output
-"I absolutely love this product!"	Positive
-"Terrible experience. Will not buy again."	Negative
+Fork the repository
 
-📁 Dataset
-The model is trained using a dataset of labeled positive and negative reviews. The dataset is located in the data/ folder.
+Create a new branch:
+```
+git checkout -b feature-name
+```
+Make your changes and commit them:
+```
+git commit -m "Add feature XYZ"
+```
+Push and open a Pull Request
 
-🤝 Contributing
-Contributions are welcome! Feel free to fork the repo and submit a pull request. For major changes, please open an issue first to discuss your ideas.
+## 📄 License
+This project is licensed under the [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 
-📄 License
-This project is licensed under the MIT License – see the LICENSE file for details.
+## 👩‍💻 Author
 
-🙏 Acknowledgements
-TensorFlow
-
-Keras
-
-Flask
+**Aarya Mehta**  
+🔗 [GitHub Profile](https://github.com/AaryaMehta2506)
 

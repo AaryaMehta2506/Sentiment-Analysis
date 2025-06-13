@@ -24,3 +24,75 @@ TensorFlow: Backend for Keras to execute deep learning operations
 Jupyter Notebook: For model training, visualization, and evaluation
 
 Pandas & NumPy: For data manipulation and preprocessing
+
+🗂️ Project Structure
+
+Sentiment-Analysis/
+├── sentiment_model.h5                 # Trained Keras model
+├── app.py                             # Flask web application
+├── Sentiment_Analysis_Notebook.ipynb # Jupyter notebook for model training & testing
+├── data/                              # Dataset folder with labeled reviews
+├── requirements.txt                   # Python dependencies
+├── README.md                          # Project documentation
+├── static/ & templates/               # HTML/CSS/JS for the Flask app
+└── LICENSE                            # MIT License
+
+⚙️ Setup Instructions
+🔄 Clone the Repository
+
+git clone https://github.com/your-username/Sentiment-Analysis.git
+cd Sentiment-Analysis
+🧪 Create and Activate Virtual Environment (Recommended)
+
+python -m venv env
+source env/bin/activate     # On Windows: env\Scripts\activate
+📦 Install Required Packages
+bash
+Copy
+Edit
+pip install -r requirements.txt
+🚀 Run the Flask App
+bash
+Copy
+Edit
+python app.py
+Then, open your browser and go to: http://127.0.0.1:5000/
+
+📊 Model Training & Evaluation
+To retrain the model or explore how it works:
+
+Open Sentiment_Analysis_Notebook.ipynb in Jupyter Notebook or Google Colab.
+
+Follow the steps for:
+
+Data loading & cleaning
+
+Tokenization and preprocessing
+
+Model creation using Keras
+
+Training and evaluation
+
+Save the trained model as sentiment_model.h5.
+
+💡 Example Use Case
+Input Review	Output
+"I absolutely love this product!"	Positive
+"Terrible experience. Will not buy again."	Negative
+
+📁 Dataset
+The model is trained using a dataset of labeled positive and negative reviews. The dataset is located in the data/ folder.
+
+🤝 Contributing
+Contributions are welcome! Feel free to fork the repo and submit a pull request. For major changes, please open an issue first to discuss your ideas.
+
+📄 License
+This project is licensed under the MIT License – see the LICENSE file for details.
+
+🙏 Acknowledgements
+TensorFlow
+
+Keras
+
+Flask
+
